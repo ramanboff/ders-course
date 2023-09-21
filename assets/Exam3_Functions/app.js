@@ -128,8 +128,24 @@ const myFunc = (callback) => {
   let value = 50
   callback(value)
 }
-myFunc(function(value){
-  console.log(value);  
+myFunc(function(result){
+  console.log(result);  
 })
 
+//Bu numunede  myFunc  funksiyasina  arqument kimi daha bir verilib.
+//Callback funksiyannin  funksiyaya arqument kimi verilmesidir . 
+//Icerdeki Callbacin ozune de  arqument kimi value  verilib, valu da  50 oldugunnan  netice  50 olacag
 
+
+                         //! Callback-i isledek
+
+const ul  = document.querySelector('ul')
+
+const people = ['raman', 'akif', 'arif', 'kamil']
+
+let html = ``
+people.forEach((person) => {
+html += `<li>${person}</li>`
+})
+
+ul.innerHTML = html    //Ekranda   altalda list kimi sira ile   raman akif arif kamil gosterecek
